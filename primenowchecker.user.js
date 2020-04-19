@@ -23,6 +23,11 @@ setTimeout(function(){ window.scrollTo(0,0); }, 3000);
 
 var slotUnavailable=true;
 
+//search for playing sound in Firefox preferences - add exception https://primenow.amazon.co.uk/
+var slotFoundSound = document.createElement('audio');
+slotFoundSound.src = 'https://ia803000.us.archive.org/13/items/Zoidberg_Whoop/whoop.mp3';
+slotFoundSound.preload = 'auto';
+
 try {
   
 	slotUnavailable=(/No delivery windows/i.test(document.getElementById('delivery-slot-form').innerText));
@@ -50,7 +55,8 @@ if(slotUnavailable){
 
 }
 else {
-  
+  	
+    slotFoundSound.play();
     bigRedBanner.setAttribute('style', 'width:100%; background-color: red;text-align:center;padding-top: 15px; padding-bottom:20px; color: white; font-weight: bolder; font-size:33px;');
     bigRedBanner.innerText = '🎉SLOT FOUND!🎉';
 
