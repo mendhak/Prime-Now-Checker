@@ -8,8 +8,7 @@
  
 
 var i = 0;
-//var refreshAfter = Math.floor((Math.random() * 100) + 1)+60; 
-var refreshAfter = 20; 
+var refreshAfter = Math.floor((Math.random() * 100) + 1)+60; 
 
 var bigRedBanner = document.createElement('div');
 bigRedBanner.setAttribute('style', 'width:100%; background-color: white;text-align:center;padding-top: 15px; padding-bottom:20px; font-size:24px; font-weight: bolder; ');
@@ -48,7 +47,6 @@ if(slotUnavailable){
        
 
         if (i == refreshAfter) {
-          slotFoundSound.play();
           location.reload();
         }
 
@@ -57,7 +55,8 @@ if(slotUnavailable){
 
 }
 else {
-  
+  	
+  	slotFoundSound.play();
     bigRedBanner.setAttribute('style', 'width:100%; background-color: red;text-align:center;padding-top: 15px; padding-bottom:20px; color: white; font-weight: bolder; font-size:33px;');
     bigRedBanner.innerText = '🎉SLOT FOUND!🎉';
 
