@@ -8,7 +8,8 @@
  
 
 var i = 0;
-var refreshAfter = Math.floor((Math.random() * 100) + 1)+60; 
+//var refreshAfter = Math.floor((Math.random() * 100) + 1)+60; 
+var refreshAfter = 20; 
 
 var bigRedBanner = document.createElement('div');
 bigRedBanner.setAttribute('style', 'width:100%; background-color: white;text-align:center;padding-top: 15px; padding-bottom:20px; font-size:24px; font-weight: bolder; ');
@@ -22,6 +23,11 @@ setTimeout(function(){ window.scrollTo(0,0); }, 3000);
 
 
 var slotUnavailable=true;
+
+//search for playing sound in Firefox preferences - add exception https://primenow.amazon.co.uk/
+var slotFoundSound = document.createElement('audio');
+slotFoundSound.src = 'https://ia803000.us.archive.org/13/items/Zoidberg_Whoop/whoop.mp3';
+slotFoundSound.preload = 'auto';
 
 try {
   
@@ -42,7 +48,8 @@ if(slotUnavailable){
        
 
         if (i == refreshAfter) {
-            location.reload();
+          slotFoundSound.play();
+          location.reload();
         }
 
 
