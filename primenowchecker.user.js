@@ -47,7 +47,7 @@ if(slotUnavailable){
        
 
         if (i == refreshAfter) {
-          location.reload();
+            location.reload();
         }
 
 
@@ -56,7 +56,7 @@ if(slotUnavailable){
 }
 else {
   	
-  	slotFoundSound.play();
+    slotFoundSound.play();
     bigRedBanner.setAttribute('style', 'width:100%; background-color: red;text-align:center;padding-top: 15px; padding-bottom:20px; color: white; font-weight: bolder; font-size:33px;');
     bigRedBanner.innerText = '🎉SLOT FOUND!🎉';
 
