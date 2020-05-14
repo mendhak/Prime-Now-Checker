@@ -3,7 +3,6 @@
 // @namespace   https://example.com
 // @version     1
 // @match https://primenow.amazon.co.uk/checkout/enter-checkout*
-// @match https://code.mendhak.com/*
 // ==/UserScript==
  
 
